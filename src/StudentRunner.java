@@ -12,6 +12,8 @@
         student1.addTestScore(95);
         student1.printStudentInfo();
         System.out.println();
+        System.out.println( "Charlie's lowest grade (will be dropped) was " + student1.dropLowest());
+        System.out.println("His new average is: " + student1.averageTestScore());
 
         Student student2 = new Student("Amy", "Adams", 2022);
         student2.addTestScore(68.2);
@@ -38,6 +40,8 @@
         } else {
             System.out.println(student1name + " and " + student2name + " have equal averages");
         }
+
+
 
     }
 

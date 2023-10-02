@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.util.ArrayList;
+
 public class Student {
     ArrayList<Double> list = new ArrayList<Double>();
     /* Instance Variables */
@@ -64,8 +64,16 @@ public class Student {
 
     //Drop lowest grade
     public double dropLowest() {
-        accumulatedTestScores -=
+        double min = list.get(0);
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) < min) {
+                min = list.get(i);
+            }
+        }
+      //  list.remove(min);
+        accumulatedTestScores -= min;
         testScoreCount--;
+        return min;
     }
 
 
